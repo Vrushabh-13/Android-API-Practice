@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">29API</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="user_name">User Name</string>
+    <string name="post_id">Post Id</string>
+    <string name="id">Id</string>
+    <string name="body">Body</string>
+</resources>
