@@ -21,13 +21,14 @@ class CommentsAdapter(private val list: ArrayList<MyCommentsItem>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = list[position]
-         holder.binding.apply {
-             tvName.text = item.name
-             tvEmail.text = item.email
-             tvBody.text = item.body
-             tvId.text = "ID: ${item.id}"
-             tvPostId.text = "PostID: ${item.postId}"
-         }
+            holder.binding.apply {
+                tvName.text = item.name
+                tvEmail.text = item.email
+                tvBody.text = item.body
+                tvId.text = "ID: ${item.id}"
+                tvPostId.text = "PostID: ${item.postId}"
+
+        }
 
 
 

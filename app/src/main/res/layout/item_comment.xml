@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="12dp">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="12dp"
+    android:background="@color/red"
+    android:layout_margin="10dp">
 
     <TextView
         android:id="@+id/tvName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:text="Name"
+        tools:text="Name"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -20,7 +22,7 @@
     <TextView
         android:id="@+id/tvEmail"
         android:layout_width="0dp"
-        android:text="Email"
+        tools:text="Email"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/tvName"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,7 +31,7 @@
     <TextView
         android:id="@+id/tvBody"
         android:layout_width="0dp"
-        android:text="@string/body"
+        tools:text="@string/body"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/tvEmail"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,7 +40,7 @@
     <TextView
         android:id="@+id/tvId"
         android:layout_width="wrap_content"
-        android:text="@string/id"
+        tools:text="@string/id"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/tvBody"
         app:layout_constraintStart_toStartOf="parent"/>
@@ -46,7 +48,7 @@
     <TextView
         android:id="@+id/tvPostId"
         android:layout_width="wrap_content"
-        android:text="@string/post_id"
+        tools:text="@string/post_id"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/tvBody"
         app:layout_constraintEnd_toEndOf="parent"/>

@@ -4,7 +4,6 @@ package com.example.a29api
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.a29api.databinding.ActivityMainBinding
 import retrofit2.*
 import retrofit2.converter.gson.GsonConverterFactory
@@ -23,6 +22,11 @@ class UsersActivity : AppCompatActivity() {
         adapter = UsersAdapter(list)
         binding.recyclerView.adapter = adapter
 
+        apiUserItem()
+
+
+    }
+    fun apiUserItem(){
         val retrofit = Retrofit.Builder()
             .baseUrl("https://jsonplaceholder.typicode.com/")
             .addConverterFactory(GsonConverterFactory.create())
@@ -47,5 +51,6 @@ class UsersActivity : AppCompatActivity() {
                 Log.d("UsersActivity", "Error: ${t.message}")
             }
         })
+
     }
 }

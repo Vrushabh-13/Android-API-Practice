@@ -46,7 +46,14 @@ class MainActivity : AppCompatActivity() {
 
                 if (responseBody != null) {
                     list.clear()
-                    list.addAll(responseBody)
+                    //list.addAll(responseBody.filterIndexed { index, item -> (index + 1) % 2 ==0 })
+                    var evenItems = arrayListOf<MyCommentsItem>()
+                    for(index in responseBody.indices){
+                        if((index + 1) % 2 == 0){
+                            evenItems.add(responseBody[index])
+                        }
+                    }
+                    list.addAll(evenItems)
                     adapter.notifyDataSetChanged()
                 }
             }
